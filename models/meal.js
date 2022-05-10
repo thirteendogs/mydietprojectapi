@@ -1,4 +1,3 @@
-require('dotenv').config()
 const mongoose = require('mongoose')
 
 const mealSchema = new mongoose.Schema({
@@ -21,6 +20,4 @@ mealSchema.set('toJSON', {
    }
 })
 
-const Meal = mongoose.model('Meal', mealSchema)
-
-module.exports = Meal
+module.exports = mongoose.model('Meal', mealSchema)

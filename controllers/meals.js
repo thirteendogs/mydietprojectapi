@@ -5,7 +5,7 @@ const User = require('../models/user')
 mealsRouter.get('/', async (request, response) => {
   const meals = await Meal
     .find({})
-    .populate('user', { username: 1, name: 1 })
+    .populate('user', { username: 1 })
 
   response.json(meals)
 })
@@ -22,7 +22,8 @@ mealsRouter.get('/:id', async (request, response) => {
 
 mealsRouter.post('/', async (request, response) => {
   const body = request.body
-  const user = await User.findById(body.userId)
+  console.log("bodyyy", body);
+  const user = await User.findById(body.user)
 
   const meal = new Meal({
     ingredients: body.ingredients,

@@ -5,7 +5,7 @@ const User = require('../models/user')
 usersRouter.get('/', async (request, response) => {
   const users = await User
     .find({})
-    .populate('meals', { ingredients: 1, proteins: 1, carbohydrates: 1, fats:1, calories:1 })
+    .populate('meals', { ingredients: 1, proteins: 1, carbohydrates: 1, fats:1, calories:1, user:1 })
 
   response.json(users)
 })
