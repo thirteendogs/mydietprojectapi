@@ -12,10 +12,13 @@
   "author": "Daniel Nova Girbau",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "4.17.2",
-    "mongoose": "^6.3.3"
+    "express-async-errors": "^3.1.1",
+    "mongoose": "^6.3.3",
+    "mongoose-unique-validator": "^3.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
